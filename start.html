@@ -4,9 +4,11 @@
   <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body>
+   <h1>Hello World Start<h1>
   <google-cast-launcher></google-cast-launcher>
   <script>
   initializeCastApi = function() {
+    console.log('initializeCastApi');
     cast.framework.CastContext.getInstance().setOptions({
       receiverApplicationId: 'F63A7E2A',
       autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
