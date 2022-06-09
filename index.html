@@ -7,7 +7,38 @@
 <body>
   <cast-media-player></cast-media-player>
   <script>
-    cast.framework.CastReceiverContext.getInstance().start();
+    const context = cast.framework.CastReceiverContext.getInstance();
+    context.setLoggerLevel(cast.framework.LoggerLevel.DEBUG);
+    const options = new cast.framework.CastReceiverOptions();
+    const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
+    castDebugLogger.setEnabled(true);
+
+        // Show debug overlay
+    castDebugLogger.showDebugLogs(true);
+    
+    if (context.canDisplayType('audio/mp4; codecs=ec-3; spatialRendering=true') {
+      castDebugLogger.info("Supported format: ", 'Atmos');;
+      // The device supports Atmos
+    }
+    
+    if (context.canDisplayType('audio/mp4', 'mhm1.0x0D') {
+        // The device supports 360RA L1 and L2
+        castDebugLogger.info("Supported format: ", '360RA L1+L2 (mhm1.0x0D)');;
+
+    }
+    if (context.canDisplayType('audio/mp4', 'mhm1.0x0E') {
+        // The device supports 360RA L3
+        castDebugLogger.info("Supported format: ", '360RA L3 (mhm1.0x0E)');;
+
+    }
+    if (context.canDisplayType('audio/mp4', 'mhm1.0x12') {
+        // The device supports 360RA L1 and L2 and L3
+        castDebugLogger.info("Supported format: ", '360RA L1+L2+L3 (mhm1.0x12)');;
+
+    }
+    
+    context.start();
+
   </script>
 </body>
 </html>
