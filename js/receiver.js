@@ -28,7 +28,7 @@ if (context.canDisplayType('audio/mp4; codecs=ec-3; spatialRendering=true')){
   console.log("Supported format: audio/mp4; codecs=ec-3; spatialRendering=true");
 }
 else{
-    console.log("Supported format: audio/mp4; codecs=ec-3; spatialRendering=true");
+    console.log("NOT Supported format: audio/mp4; codecs=ec-3; spatialRendering=true");
 }
 
   context.start();
