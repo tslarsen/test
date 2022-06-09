@@ -20,7 +20,7 @@ console.log("Supported format: audio/mp4', ' mhm1.0x12: " + ismhm1_0x12);
 console.log("Supported format: audio/mp4', ' mha1.0x0D: " + ismha1_0x0D);
 console.log("Supported format: audio/mp4', ' mha1.0x0E: " + ismha1_0x0E);
 console.log("Supported format: audio/mp4', ' mha1.0x12: " + ismha1_0x12);
-console.log("Supported format: audio/mp4; codecs=ec-3; spatialRendering=true: " + ismhm1_atmos);
+console.log("Supported format: audio/mp4; codecs=ec-3; spatialRendering=true: " + isatmos);
 console.log("------------------");
 
 
