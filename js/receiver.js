@@ -6,16 +6,16 @@ const playerManager = context.getPlayerManager();
 const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
 const LOG_TAG = 'MyReceiverApp';
 
-context.addEventListener(cast.framework.system.EventType.READY, () => {
-  if (!castDebugLogger.debugOverlayElement_) {
+//context.addEventListener(cast.framework.system.EventType.READY, () => {
+//  if (!castDebugLogger.debugOverlayElement_) {
       // Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
       castDebugLogger.setEnabled(true);
       // Show debug overlay
       castDebugLogger.showDebugLogs(true);
       // Clear log messages on debug overlay
       castDebugLogger.clearDebugLogs();
-  }
-});
+//  }
+//});
 
 // Set verbosity level for Core events.
 castDebugLogger.loggerLevelByEvents = {
