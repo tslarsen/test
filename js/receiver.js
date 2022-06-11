@@ -6,16 +6,16 @@ const playerManager = context.getPlayerManager();
 const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
 const LOG_TAG = 'MyReceiverApp';
 
-//context.addEventListener(cast.framework.system.EventType.READY, () => {
-//  if (!castDebugLogger.debugOverlayElement_) {
+context.addEventListener(cast.framework.system.EventType.READY, () => {
+  if (!castDebugLogger.debugOverlayElement_) {
       // Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
       castDebugLogger.setEnabled(true);
       // Show debug overlay
       castDebugLogger.showDebugLogs(true);
       // Clear log messages on debug overlay
       castDebugLogger.clearDebugLogs();
-//  }
-//});
+  }
+});
 
 // Set verbosity level for Core events.
 castDebugLogger.loggerLevelByEvents = {
@@ -37,8 +37,9 @@ const ismha1_0x12 = context.canDisplayType('audio/mp4', ' mha1.0x12');
 const isatmos = context.canDisplayType('audio/mp4; codecs=ec-3; spatialRendering=true');
 
 castDebugLogger.info(LOG_TAG, 'Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
-castDebugLogger.debug(LOG_TAG, '1111Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
-castDebugLogger.error(LOG_TAG, '2222Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
+castDebugLogger.debug(LOG_TAG, '1111Tonni Test debug');
+castDebugLogger.info(LOG_TAG, '1111Tonni Test info');
+castDebugLogger.error(LOG_TAG, '1111Tonni Test error');
 
 console.log("------------------");
 
