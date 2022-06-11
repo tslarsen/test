@@ -8,17 +8,11 @@ const LOG_TAG = 'MyAPP.LOG';
 // Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
 castDebugLogger.setEnabled(true);
 
-// Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
-context.addEventListener(cast.framework.system.EventType.READY, () => {
-  if (!castDebugLogger.debugOverlayElement_) {
-      castDebugLogger.setEnabled(true);
+// Show debug overlay
+//castDebugLogger.showDebugLogs(true);
 
-      // Show debug overlay
-      castDebugLogger.showDebugLogs(true);
-
-      // Clear log messages on debug overlay
-      castDebugLogger.clearDebugLogs();  }
-});
+// Clear log messages on debug overlay
+//castDebugLogger.clearDebugLogs();  }
 
 // Set verbosity level for Core events.
 castDebugLogger.loggerLevelByEvents = {
