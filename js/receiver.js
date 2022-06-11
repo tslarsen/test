@@ -10,14 +10,12 @@ context.addEventListener(cast.framework.system.EventType.READY, () => {
   if (!castDebugLogger.debugOverlayElement_) {
       // Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
       castDebugLogger.setEnabled(true);
+      // Show debug overlay
+      castDebugLogger.showDebugLogs(true);
+      // Clear log messages on debug overlay
+      castDebugLogger.clearDebugLogs();
   }
 });
-
-// Show debug overlay
-castDebugLogger.showDebugLogs(true);
-
-// Clear log messages on debug overlay
-//castDebugLogger.clearDebugLogs();
 
 // Set verbosity level for Core events.
 castDebugLogger.loggerLevelByEvents = {
@@ -27,7 +25,7 @@ castDebugLogger.loggerLevelByEvents = {
 
 // Set verbosity level for custom tags.
 castDebugLogger.loggerLevelByTags = {
-    LOG_TAG: cast.framework.LoggerLevel.DEBUG,
+    [LOG_TAG]: cast.framework.LoggerLevel.DEBUG,
 };
 
 const ismhm1_0x0D = context.canDisplayType('audio/mp4', ' mhm1.0x0D');
