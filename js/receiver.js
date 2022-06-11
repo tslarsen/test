@@ -26,7 +26,7 @@ const ismha1_0x0E = context.canDisplayType('audio/mp4', ' mha1.0x0E');
 const ismha1_0x12 = context.canDisplayType('audio/mp4', ' mha1.0x12');
 const isatmos = context.canDisplayType('audio/mp4; codecs=ec-3; spatialRendering=true');
 
-castDebugLogger.info(LOG_TAG, 'Tonni Test: Supported format: audio/mp4', ' mhm1.0x0D: ' ismhm1_0x0D);
+castDebugLogger.info(LOG_TAG, 'Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
 
 console.log("------------------");
 
