@@ -9,7 +9,7 @@ const LOG_TAG = 'MyAPP.LOG';
 castDebugLogger.setEnabled(true);
 
 // Show debug overlay
-//castDebugLogger.showDebugLogs(true);
+castDebugLogger.showDebugLogs(true);
 
 // Clear log messages on debug overlay
 //castDebugLogger.clearDebugLogs();  }
