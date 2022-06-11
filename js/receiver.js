@@ -51,30 +51,4 @@ console.log("Supported format: audio/mp4', ' mha1.0x12: " + ismha1_0x12);
 console.log("Supported format: audio/mp4; codecs=ec-3; spatialRendering=true: " + isatmos);
 console.log("------------------");
 
-playerManager.setMessageInterceptor(
-    cast.framework.messages.MessageType.LOAD,
-    request => {
-        castDebugLogger.debug(LOG_TAG, 'Intercepting LOAD request');
-
-        return new Promise((resolve, reject) => {
-            fetchMediaAsset(request.media.contentId).then(
-                data => {
-                    let item = data[request.media.contentId];
-                    if (!item) {
-                        castDebugLogger.error(LOG_TAG, 'Content not found');
-
-                        reject();
-                    } else {
-                        request.media.contentUrl = item.stream.hls;
-                        castDebugLogger.info(LOG_TAG,
-                            'Playable URL:', request.media.contentUrl);
-
-                        resolve(request);
-                    }
-                }
-            );
-        });
-    }
-);
-
 context.start();
