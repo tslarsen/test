@@ -6,6 +6,9 @@ const castDebugLogger = cast.debug.CastDebugLogger.getInstance();
 const LOG_TAG = 'MyAPP.LOG';
 
 // Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
+castDebugLogger.setEnabled(true);
+
+// Enable debug logger and show a 'DEBUG MODE' overlay at top left corner.
 context.addEventListener(cast.framework.system.EventType.READY, () => {
   if (!castDebugLogger.debugOverlayElement_) {
       castDebugLogger.setEnabled(true);
@@ -25,7 +28,7 @@ castDebugLogger.loggerLevelByEvents = {
 
 // Set verbosity level for custom tags.
 castDebugLogger.loggerLevelByTags = {
-    [LOG_TAG]: cast.framework.LoggerLevel.DEBUG,
+    LOG_TAG: cast.framework.LoggerLevel.DEBUG,
 };
 
 const ismhm1_0x0D = context.canDisplayType('audio/mp4', ' mhm1.0x0D');
@@ -37,6 +40,7 @@ const ismha1_0x12 = context.canDisplayType('audio/mp4', ' mha1.0x12');
 const isatmos = context.canDisplayType('audio/mp4; codecs=ec-3; spatialRendering=true');
 
 castDebugLogger.info(LOG_TAG, 'Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
+castDebugLogger.error(LOG_TAG, '2222Tonni Test: Supported format: audio/mp4  mhm1.0x0D: ' , ismhm1_0x0D);
 
 console.log("------------------");
 
